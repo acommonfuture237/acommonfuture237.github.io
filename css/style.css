@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f6b6c9;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* HEADER */
+header {
+  background: #9b1b50;
+  color: #fff;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.slogan {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.slogan span {
+  display: inline-block;
+  animation: scrollText 12s linear infinite;
+}
+
+@keyframes scrollText {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* HAMBURGER */
+.menu-btn {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+nav {
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  padding: 20px;
+  transition: 0.4s;
+}
+
+nav.active {
+  right: 0;
+}
+
+nav a {
+  display: block;
+  margin: 12px 0;
+  color: #9b1b50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* CONTENT FRAME */
+main {
+  padding: 120px 20px 40px;
+}
+
+.content-box {
+  background: #fff;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* SCROLL ANIMATION */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* QUICK LINKS */
+.quick-links a {
+  display: inline-block;
+  margin: 6px 10px 6px 0;
+  color: #9b1b50;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: #9b1b50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* FORM */
+form input, form textarea, form button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+}
+
+form button {
+  background: #9b1b50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
