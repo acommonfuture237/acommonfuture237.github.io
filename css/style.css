@@ -67,6 +67,7 @@ nav {
   background: #ffffff;
   padding: 20px;
   transition: 0.4s;
+  z-index: 2000; /* ✅ FORCE MENU ABOVE CONTENT */
 }
 
 nav.active {
@@ -184,8 +185,14 @@ form button:hover {
 @media (max-width: 768px) {
 
   header {
-    padding: 12px 15px;
-  }
+  background: #6fcf97;
+  color: #ffffff;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3000; /* ✅ HEADER ABOVE EVERYTHING */
+}
 
   .header-inner {
     flex-direction: column;
