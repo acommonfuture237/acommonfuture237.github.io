@@ -11,10 +11,12 @@ body {
   line-height: 1.7;
 }
 
-/* HEADER */
+/* =========================
+   HEADER (LIGHT GREEN)
+   ========================= */
 header {
-  background: #9b1b50;
-  color: #fff;
+  background: #6fcf97;
+  color: #ffffff;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -48,7 +50,9 @@ header {
   to { transform: translateX(-100%); }
 }
 
-/* HAMBURGER */
+/* =========================
+   HAMBURGER MENU
+   ========================= */
 .menu-btn {
   font-size: 28px;
   cursor: pointer;
@@ -60,7 +64,7 @@ nav {
   right: -100%;
   width: 260px;
   height: 100vh;
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   transition: 0.4s;
 }
@@ -72,18 +76,24 @@ nav.active {
 nav a {
   display: block;
   margin: 12px 0;
-  color: #9b1b50;
+  color: #3fa86b;
   text-decoration: none;
   font-weight: 600;
 }
 
-/* CONTENT FRAME */
+nav a:hover {
+  color: #6fcf97;
+}
+
+/* =========================
+   CONTENT FRAME
+   ========================= */
 main {
   padding: 120px 20px 40px;
 }
 
 .content-box {
-  background: #fff;
+  background: #ffffff;
   max-width: 1100px;
   margin: auto;
   padding: 40px;
@@ -91,7 +101,9 @@ main {
   animation: fadeInUp 1s ease forwards;
 }
 
-/* SCROLL ANIMATION */
+/* =========================
+   SCROLL ANIMATION
+   ========================= */
 .section {
   opacity: 0;
   transform: translateY(40px);
@@ -108,53 +120,67 @@ main {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* QUICK LINKS */
+/* =========================
+   QUICK LINKS
+   ========================= */
 .quick-links a {
   display: inline-block;
   margin: 6px 10px 6px 0;
-  color: #9b1b50;
+  color: #3fa86b;
   text-decoration: underline;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER (LIGHT GREEN)
+   ========================= */
 footer {
-  background: #9b1b50;
-  color: #fff;
+  background: #6fcf97;
+  color: #ffffff;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
 }
 
-/* FORM */
-form input, form textarea, form button {
+/* =========================
+   FORM
+   ========================= */
+form input,
+form textarea,
+form button {
   width: 100%;
   margin: 10px 0;
   padding: 12px;
 }
 
 form button {
-  background: #9b1b50;
-  color: #fff;
+  background: #3fa86b;
+  color: #ffffff;
   border: none;
   cursor: pointer;
 }
 
-/* WHATSAPP */
+form button:hover {
+  background: #2f8f5c;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+   ========================= */
 .whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25d366;
-  color: #fff;
+  color: #ffffff;
   padding: 14px 18px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
 }
+
 /* =========================
    MOBILE RESPONSIVENESS
    ========================= */
-
 @media (max-width: 768px) {
 
   header {
