@@ -31,7 +31,7 @@ header {
 }
 
 .logo img {
-  height: 52px;   /* reduced by one eighth (≈87.5% of original) */
+  height: 104px;  /* about 2× the previous 52px size */
   width: auto;
   display: block;
 }
