@@ -2,15 +2,17 @@ function toggleMenu() {
   document.getElementById("nav").classList.toggle("active");
 }
 
-function setHeaderHeight() {
-  const header = document.querySelector("header");
-  if (header) {
-    document.documentElement.style.setProperty(
-      "--header-height",
-      header.offsetHeight + "px"
-    );
-  }
+// Scroll-in animation (safe)
+const animatedSections = document.querySelectorAll(".animate");
+
+function animateOnScroll() {
+  animatedSections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      section.classList.add("show");
+    }
+  });
 }
 
-window.addEventListener("load", setHeaderHeight);
-window.addEventListener("resize", setHeaderHeight);
+window.addEventListener("scroll", animateOnScroll);
+window.addEventListener("load", animateOnScroll);
