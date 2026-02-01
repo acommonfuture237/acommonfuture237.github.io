@@ -220,9 +220,8 @@ form button:hover {
   }
 
   main {
-    padding: 140px 12px 30px;
-  }
-
+  padding: 220px 12px 30px;
+}
   .content-box {
     padding: 22px;
     border-radius: 8px;
