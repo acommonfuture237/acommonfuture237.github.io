@@ -267,3 +267,22 @@ form button:hover {
     font-size: 15px;
   }
 }
+@media (max-width: 768px) {
+
+  header {
+    padding: 10px 12px;
+  }
+
+  .logo img {
+    height: 96px; /* smaller logo on mobile */
+  }
+
+  .header-inner {
+    gap: 6px;
+  }
+
+  .slogan span {
+    font-size: 13px;
+  }
+
+}
