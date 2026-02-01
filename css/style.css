@@ -53,11 +53,20 @@ header {
 }
 
 /* Reduce logo by one third on mobile */
+/* ================= MOBILE SLOGAN FIX ================= */
 @media (max-width: 768px) {
-  .logo img {
-    height: 82px;
+
+  .slogan-container {
+    display: block;        /* keep it visible */
+    height: 18px;
+    min-width: 0;
+  }
+
+  .slogan-track span {
+    font-size: 12px;       /* smaller text on mobile */
   }
 }
+
 
 /* ============ SCROLLING SLOGAN ============ */
 .slogan-container {
