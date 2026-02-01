@@ -328,3 +328,39 @@ form button:hover {
     padding: 15px !important;
   }
 }
+/* =========================
+   COGNITO FORM FIX
+   ========================= */
+
+.cognito,
+.cognito form,
+.cognito iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.cognito {
+  background: #ffffff !important;
+  padding: 20px !important;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.cognito .c-forms-form {
+  margin: 0 auto !important;
+}
+
+.cognito input,
+.cognito textarea,
+.cognito select {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  .cognito {
+    padding: 15px !important;
+  }
+}
+
