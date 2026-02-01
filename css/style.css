@@ -94,9 +94,9 @@ nav a:hover {
    CONTENT FRAME
    ========================= */
 main {
-  padding: 40px 20px;
+  padding: 260px 20px 40px; /* ensures content frame is visible */
   position: relative;
-  z-index  transition: 0.7s;
+  z-index: 1;
 }
 
 .section.show {
