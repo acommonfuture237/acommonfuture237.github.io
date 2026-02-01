@@ -94,7 +94,8 @@ nav a:hover {
    CONTENT FRAME
    ========================= */
 main {
-  padding: 260px 20px 40px; /* ensures content frame is visible */
+  margin-top: var(--header-height);
+  padding: 40px 20px;
   position: relative;
   z-index: 1;
 }
@@ -219,9 +220,6 @@ form button:hover {
     padding: 10px 0;
   }
 
-  main {
-  padding: 220px 12px 30px;
-}
   .content-box {
     padding: 22px;
     border-radius: 8px;
