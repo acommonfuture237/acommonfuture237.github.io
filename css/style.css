@@ -19,14 +19,21 @@ body {
   line-height: 1.7;
 }
 
-/* ============ HEADER ============ */
+/* ============ HEADER (DROP DOWN ANIMATION) ============ */
 header {
   background: #bfe8c7;
   color: #083b2d;
   position: fixed;
-  top: 0;
+  top: -200px;               /* start hidden */
   width: 100%;
   z-index: 1000;
+  animation: headerDrop 0.8s ease forwards;
+}
+
+@keyframes headerDrop {
+  to {
+    top: 0;
+  }
 }
 
 .header-inner {
@@ -38,29 +45,21 @@ header {
   gap: 12px;
 }
 
-/* Logo */
+/* ============ LOGO ============ */
 .logo img {
-  height: 123px;   /* reduced by one third from 184px */
+  height: 123px;            /* desktop size */
   width: auto;
   flex-shrink: 0;
 }
+
+/* Reduce logo by one third on mobile */
 @media (max-width: 768px) {
   .logo img {
-    height: 80px;
-  }
-}
-.logo img {
-  height: 123px;
-  width: auto;
-  flex-shrink: 0;
-}
-@media (max-width: 768px) {
-  .logo img {
-    height: 82px; /* reduced by one third on mobile */
+    height: 82px;
   }
 }
 
-/* ============ SCROLLING SLOGAN (VISIBLE EVERYWHERE) ============ */
+/* ============ SCROLLING SLOGAN ============ */
 .slogan-container {
   position: relative;
   overflow: hidden;
@@ -82,7 +81,6 @@ header {
   color: #083b2d;
 }
 
-/* REAL marquee motion */
 @keyframes sloganScroll {
   from {
     transform: translateX(0);
@@ -92,7 +90,7 @@ header {
   }
 }
 
-/* Menu button */
+/* ============ MENU BUTTON ============ */
 .menu-btn {
   font-size: 28px;
   cursor: pointer;
@@ -122,10 +120,19 @@ nav a:hover {
 
 /* ============ MOBILE NAV ============ */
 @media (max-width: 768px) {
-  .menu-btn {
-    display: block;
+
+  /* Hide slogan on mobile to save space */
+  .slogan-container {
+    display: none;
   }
 
+  /* Show hamburger */
+  .menu-btn {
+    display: block;
+    z-index: 1100;
+  }
+
+  /* Mobile menu behavior */
   nav {
     display: none;
     flex-direction: column;
@@ -142,18 +149,30 @@ nav a:hover {
   }
 }
 
-/* ============ MAIN CONTENT ============ */
+/* ============ MAIN CONTENT (MOVE UP ANIMATION) ============ */
 .main {
   max-width: 1100px;
-  margin: 120px auto 40px;
+  margin: 160px auto 40px;   /* desktop spacing under header */
   background: #ffffff;
   padding: 40px;
   border-radius: 8px;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: contentUp 0.9s ease forwards;
 }
 
+@keyframes contentUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile spacing fix (DO NOT TOUCH ANIMATION) */
 @media (max-width: 768px) {
   .main {
-    margin: 100px 12px 30px;
+    margin: 180px 12px 30px; /* prevents header overlap */
     padding: 22px;
   }
 }
@@ -176,35 +195,4 @@ footer {
   padding: 12px 14px;
   border-radius: 50%;
   text-decoration: none;
-}
-/* ================= MOBILE HEADER FIX ================= */
-@media (max-width: 768px) {
-
-  /* Hide slogan to free space */
-  .slogan-container {
-    display: none;
-  }
-
-  /* Ensure header has enough height */
-  header {
-    position: fixed;
-    top: 0;
-    height: auto;
-  }
-
-  /* Stack header items cleanly */
-  .header-inner {
-    align-items: center;
-  }
-
-  /* Force hamburger visibility */
-  .menu-btn {
-    display: block !important;
-    z-index: 1100;
-  }
-
-  /* Push page content below header */
-  .main {
-    margin-top: 160px; /* prevents overlap */
-  }
 }
