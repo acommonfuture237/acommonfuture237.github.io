@@ -49,10 +49,35 @@ header {
   max-width: 100%;
 }
 
-.slogan {
+/* ============ SCROLLING SLOGAN ============ */
+.slogan-container {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 320px;
+}
+
+.slogan-scroll {
+  display: inline-block;
+  padding-left: 100%;
+  animation: sloganMove 12s linear infinite;
   font-size: 14px;
   color: #083b2d;
-  white-space: nowrap;
+}
+
+@keyframes sloganMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hide slogan on smaller screens */
+@media (max-width: 900px) {
+  .slogan-container {
+    display: none;
+  }
 }
 
 .menu-btn {
@@ -83,12 +108,6 @@ nav a:hover {
 }
 
 /* ============ MOBILE NAV ============ */
-@media (max-width: 900px) {
-  .slogan {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -121,14 +140,6 @@ nav a:hover {
   opacity: 0;
 }
 
-/* Mobile padding fix */
-@media (max-width: 768px) {
-  .main {
-    margin: 130px 12px 30px;
-    padding: 22px;
-  }
-}
-
 @keyframes contentUp {
   from {
     transform: translateY(30px);
@@ -137,6 +148,13 @@ nav a:hover {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 130px 12px 30px;
+    padding: 22px;
   }
 }
 
@@ -149,28 +167,6 @@ h1, h2 {
 p {
   margin-bottom: 14px;
   font-size: 16px;
-}
-
-/* ============ HERO ============ */
-.hero {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-}
-
-/* ============ BUTTON ============ */
-.btn {
-  background: #0b6b3f;
-  color: #fff;
-  padding: 12px 26px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
 }
 
 /* ============ FOOTER ============ */
