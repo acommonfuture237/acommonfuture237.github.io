@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -91,23 +92,35 @@ nav a:hover {
 }
 
 /* =========================
-   CONTENT FRAME
+   CONTENT FRAME (FIXED)
    ========================= */
 main {
-  margin-top: var(--header-height);
-  padding: 40px 20px;
+  padding: 260px 20px 40px; /* pushes content below fixed header */
   position: relative;
   z-index: 1;
+}
+
+.content-box {
+  background: #ffffff;
+  max-width: 820px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   SCROLL ANIMATION
+   ========================= */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s;
 }
 
 .section.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================
@@ -169,33 +182,42 @@ form button:hover {
 }
 
 /* =========================
+   COGNITO FORM FIX
+   ========================= */
+.cognito,
+.cognito form,
+.cognito iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.cognito {
+  background: #ffffff !important;
+  padding: 20px !important;
+  border-radius: 8px;
+}
+
+/* =========================
    MOBILE RESPONSIVENESS
    ========================= */
 @media (max-width: 768px) {
 
   header {
-  background: #6fcf97;
-  color: #ffffff;
-  padding: 15px 20px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 3000; /* ✅ HEADER ABOVE EVERYTHING */
-}
+    padding: 10px 12px;
+  }
 
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
   }
 
-  .logo {
-    font-size: 18px;
+  .logo img {
+    height: 96px;
   }
 
-  .slogan {
-    width: 100%;
-    font-size: 14px;
+  .slogan span {
+    font-size: 13px;
   }
 
   .menu-btn {
@@ -204,20 +226,8 @@ form button:hover {
     top: 15px;
   }
 
-  nav a {
-  display: block;
-  margin: 2px 0;        /* ultra-tight vertical spacing */
-  padding: 4px 0;       /* minimal tap area, still usable */
-  color: #3fa86b;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-  nav a {
-    font-size: 16px;
-    padding: 10px 0;
+  main {
+    padding: 220px 12px 30px;
   }
 
   .content-box {
@@ -238,109 +248,12 @@ form button:hover {
     padding: 18px 12px;
   }
 
-  .quick-links a {
-    display: block;
-    margin: 6px 0;
-  }
-
   .whatsapp {
     padding: 12px 16px;
     font-size: 14px;
   }
 
-  form input,
-  form textarea,
-  form button {
-    font-size: 15px;
-  }
-}
-@media (max-width: 768px) {
-
-  header {
-    padding: 10px 12px;
-  }
-
-  .logo img {
-    height: 96px; /* smaller logo on mobile */
-  }
-
-  .header-inner {
-    gap: 6px;
-  }
-
-  .slogan span {
-    font-size: 13px;
-  }
-
-}
-/* =========================
-   COGNITO FORM FIX
-   ========================= */
-
-.cognito,
-.cognito form,
-.cognito iframe {
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
-.cognito {
-  background: #ffffff !important;
-  padding: 20px !important;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.cognito .c-forms-form {
-  margin: 0 auto !important;
-}
-
-.cognito input,
-.cognito textarea,
-.cognito select {
-  width: 100% !important;
-  box-sizing: border-box;
-}
-
-/* Mobile fine-tuning */
-@media (max-width: 768px) {
   .cognito {
     padding: 15px !important;
   }
 }
-/* =========================
-   COGNITO FORM FIX
-   ========================= */
-
-.cognito,
-.cognito form,
-.cognito iframe {
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
-.cognito {
-  background: #ffffff !important;
-  padding: 20px !important;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.cognito .c-forms-form {
-  margin: 0 auto !important;
-}
-
-.cognito input,
-.cognito textarea,
-.cognito select {
-  width: 100% !important;
-  box-sizing: border-box;
-}
-
-/* Mobile fine-tuning */
-@media (max-width: 768px) {
-  .cognito {
-    padding: 15px !important;
-  }
-}
-
