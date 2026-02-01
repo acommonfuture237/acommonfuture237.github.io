@@ -49,6 +49,16 @@ header {
     height: 80px;
   }
 }
+.logo img {
+  height: 123px;
+  width: auto;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 82px; /* reduced by one third on mobile */
+  }
+}
 
 /* ============ SCROLLING SLOGAN (VISIBLE EVERYWHERE) ============ */
 .slogan-container {
