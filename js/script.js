@@ -2,17 +2,20 @@ function toggleMenu() {
   document.getElementById("nav").classList.toggle("active");
 }
 
-// Scroll-in animation (safe)
-const animatedSections = document.querySelectorAll(".animate");
+/* =========================
+   SCROLL ANIMATION (WORKING)
+   ========================= */
 
-function animateOnScroll() {
-  animatedSections.forEach(section => {
-    const rect = section.getBoundingClientRect();
+const animatedElements = document.querySelectorAll(".animate");
+
+function handleScrollAnimation() {
+  animatedElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight - 100) {
-      section.classList.add("show");
+      el.classList.add("show");
     }
   });
 }
 
-window.addEventListener("scroll", animateOnScroll);
-window.addEventListener("load", animateOnScroll);
+window.addEventListener("load", handleScrollAnimation);
+window.addEventListener("scroll", handleScrollAnimation);
