@@ -130,7 +130,3 @@ footer {
   border-radius: 50%;
   text-decoration: none;
 }
-✅ FILE 2: js/script.js
-function toggleMenu() {
-  document.getElementById("nav-menu").classList.toggle("show");
-}
