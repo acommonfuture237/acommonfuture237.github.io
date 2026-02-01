@@ -177,3 +177,34 @@ footer {
   border-radius: 50%;
   text-decoration: none;
 }
+/* ================= MOBILE HEADER FIX ================= */
+@media (max-width: 768px) {
+
+  /* Hide slogan to free space */
+  .slogan-container {
+    display: none;
+  }
+
+  /* Ensure header has enough height */
+  header {
+    position: fixed;
+    top: 0;
+    height: auto;
+  }
+
+  /* Stack header items cleanly */
+  .header-inner {
+    align-items: center;
+  }
+
+  /* Force hamburger visibility */
+  .menu-btn {
+    display: block !important;
+    z-index: 1100;
+  }
+
+  /* Push page content below header */
+  .main {
+    margin-top: 160px; /* prevents overlap */
+  }
+}
