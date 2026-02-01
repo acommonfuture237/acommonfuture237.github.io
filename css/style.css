@@ -205,3 +205,38 @@ footer {
   border-radius: 50%;
   text-decoration: none;
 }
+/* ================= MOBILE SLOGAN VISIBILITY FIX ================= */
+@media (max-width: 768px) {
+
+  /* Allow header content to wrap */
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  /* Put slogan on its own row */
+  .slogan-container {
+    order: 3;
+    width: 100%;
+    margin-top: 6px;
+    height: 18px;
+  }
+
+  /* Ensure slogan text is visible */
+  .slogan-track {
+    position: relative;
+  }
+
+  .slogan-track span {
+    font-size: 12px;
+  }
+
+  /* Keep hamburger on top row */
+  .menu-btn {
+    order: 2;
+  }
+
+  /* Logo stays first */
+  .logo {
+    order: 1;
+  }
+}
