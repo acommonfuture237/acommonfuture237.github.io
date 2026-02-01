@@ -20,3 +20,16 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+function adjustMainPadding() {
+  const header = document.querySelector("header");
+  const main = document.querySelector("main");
+
+  if (header && main) {
+    const headerHeight = header.offsetHeight;
+    main.style.paddingTop = headerHeight + 40 + "px";
+  }
+}
+
+window.addEventListener("load", adjustMainPadding);
+window.addEventListener("resize", adjustMainPadding);
