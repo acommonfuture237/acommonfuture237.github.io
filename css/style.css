@@ -234,6 +234,51 @@ footer {
   .menu-btn {
     order: 2;
   }
+/* ================= MOBILE HEADER + SLOGAN FIX (FINAL) ================= */
+@media (max-width: 768px) {
+
+  /* Allow header to grow vertically */
+  header {
+    padding-bottom: 26px;   /* creates space for slogan row */
+  }
+
+  /* Header layout wraps into two rows */
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  /* Place slogan on its own visible row */
+  .slogan-container {
+    order: 3;
+    width: 100%;
+    height: 18px;
+    margin-top: 6px;
+  }
+
+  /* Ensure slogan stays visible */
+  .slogan-track {
+    position: relative;
+  }
+
+  .slogan-track span {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  /* Keep logo + hamburger on first row */
+  .logo {
+    order: 1;
+  }
+
+  .menu-btn {
+    order: 2;
+  }
+
+  /* Push content safely below taller header */
+  .main {
+    margin-top: 200px;
+  }
+}
 
   /* Logo stays first */
   .logo {
