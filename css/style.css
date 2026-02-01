@@ -40,7 +40,7 @@ header {
 
 /* Logo */
 .logo img {
-  height: 230px;   /* 46px × 5 */
+  height: 184px;   /* 230px reduced by one-fifth */
   width: auto;
   flex-shrink: 0;
 }
