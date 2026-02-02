@@ -24,16 +24,14 @@ header {
   background: #bfe8c7;
   color: #083b2d;
   position: fixed;
-  top: -200px;               /* start hidden */
+  top: -200px;
   width: 100%;
   z-index: 1000;
   animation: headerDrop 0.8s ease forwards;
 }
 
 @keyframes headerDrop {
-  to {
-    top: 0;
-  }
+  to { top: 0; }
 }
 
 .header-inner {
@@ -42,37 +40,36 @@ header {
   padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
 }
 
 /* ============ LOGO ============ */
 .logo img {
-  height: 123px;            /* desktop size */
+  height: 123px;
   width: auto;
   flex-shrink: 0;
 }
 
-/* Reduce logo by one third on mobile */
+/* Reduce logo on mobile */
 @media (max-width: 768px) {
-  .main {
-    margin-top: 130px; /* tight, correct spacing */
+  .logo img {
+    height: 56px;
   }
 }
 
-
-/* ============ SCROLLING SLOGAN ============ */
+/* ============ DESKTOP SCROLLING SLOGAN ============ */
 .slogan-container {
   position: relative;
   overflow: hidden;
   height: 22px;
   min-width: 220px;
   flex: 1;
+  margin: 0 16px;
 }
 
 .slogan-track {
-  position: absolute;
   white-space: nowrap;
-  display: flex;
+  display: inline-flex;
   gap: 40px;
   animation: sloganScroll 15s linear infinite;
 }
@@ -83,12 +80,8 @@ header {
 }
 
 @keyframes sloganScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ============ MENU BUTTON ============ */
@@ -97,7 +90,6 @@ header {
   cursor: pointer;
   display: none;
   color: #083b2d;
-  flex-shrink: 0;
 }
 
 /* ============ NAV ============ */
@@ -119,41 +111,10 @@ nav a:hover {
   background: #7fcaa0;
 }
 
-/* ============ MOBILE NAV ============ */
-@media (max-width: 768px) {
-
-  /* Hide slogan on mobile to save space */
-  .slogan-container {
-    display: none;
-  }
-
-  /* Show hamburger */
-  .menu-btn {
-    display: block;
-    z-index: 1100;
-  }
-
-  /* Mobile menu behavior */
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  nav a {
-    width: 100%;
-    border-top: 1px solid rgba(0,0,0,0.1);
-  }
-}
-
-/* ============ MAIN CONTENT (MOVE UP ANIMATION) ============ */
+/* ============ MAIN CONTENT (ANIMATION) ============ */
 .main {
   max-width: 1100px;
-  margin: 160px auto 40px;   /* desktop spacing under header */
+  margin: 160px auto 40px;
   background: #ffffff;
   padding: 40px;
   border-radius: 8px;
@@ -167,14 +128,6 @@ nav a:hover {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Mobile spacing fix (DO NOT TOUCH ANIMATION) */
-@media (max-width: 768px) {
-  .main {
-    margin: 180px 12px 30px; /* prevents header overlap */
-    padding: 22px;
   }
 }
 
@@ -197,24 +150,47 @@ footer {
   border-radius: 50%;
   text-decoration: none;
 }
-/* ================= MOBILE SLOGAN BAR ================= */
+
+/* ===================================================== */
+/* ================= MOBILE LAYOUT ===================== */
+/* ===================================================== */
+
 .mobile-slogan {
   display: none;
 }
 
-/* Mobile only */
 @media (max-width: 768px) {
 
-  /* Hide slogan inside header */
+  /* Header: logo + hamburger only */
   .slogan-container {
     display: none;
   }
 
-  /* Show slogan as its own bar */
+  .menu-btn {
+    display: block;
+    z-index: 1100;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  /* Mobile slogan bar */
   .mobile-slogan {
     display: block;
     position: fixed;
-    top: 70px;              /* just below header */
+    top: 90px; /* header height */
     width: 100%;
     height: 22px;
     background: #9fd8b0;
@@ -238,6 +214,7 @@ footer {
 
   /* Push content below header + slogan bar */
   .main {
-    margin-top: 210px;
+    margin: 130px 12px 30px;
+    padding: 22px;
   }
 }
