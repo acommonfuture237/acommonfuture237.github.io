@@ -39,12 +39,14 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-  <div class="mobile-slogan">
+
+<div class="mobile-slogan">
   <div class="mobile-slogan-track">
     <span>Transforming lives, building common frontiers</span>
     <span>Transforming lives, building common frontiers</span>
   </div>
 </div>
+
 <div class="mobile-slogan">
   <div class="mobile-slogan-track">
     <span>Transforming lives, building common frontiers</span>
@@ -67,6 +69,80 @@
     <strong>Social Media:</strong><br>
     (Links available upon request)
   </p>
+
+  <!-- ================= CONTACT FORM ================= -->
+  <section style="margin-top: 40px;">
+    <h2>Send Us a Message</h2>
+    <p>
+      Have a question, partnership idea, or message for A Common Future?
+      Please fill out the form below and we’ll get back to you.
+    </p>
+
+    <form
+      action="https://formspree.io/f/xnjzbkll"
+      method="POST"
+      style="
+        max-width: 600px;
+        margin-top: 20px;
+        font-family: 'Poppins', Arial, sans-serif;
+      "
+    >
+
+      <label style="display:block; margin-bottom: 15px;">
+        <strong>Your Email</strong><br>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          style="
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+          "
+        >
+      </label>
+
+      <label style="display:block; margin-bottom: 20px;">
+        <strong>Your Message</strong><br>
+        <textarea
+          name="message"
+          required
+          placeholder="Write your message here..."
+          rows="5"
+          style="
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+          "
+        ></textarea>
+      </label>
+
+      <button
+        type="submit"
+        style="
+          background: #0b6b3f;
+          color: #ffffff;
+          border: none;
+          padding: 12px 28px;
+          font-size: 15px;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        Send Message
+      </button>
+
+    </form>
+  </section>
+  <!-- ================= END FORM ================= -->
+
 </main>
 
 <footer>© 2026 A Common Future</footer>
