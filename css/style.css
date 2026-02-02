@@ -57,10 +57,7 @@ header {
   }
 }
 
-/* ===================================================== */
-/* ============ SCROLLING SLOGAN (FIXED) ================ */
-/* ===================================================== */
-
+/* ============ SCROLLING SLOGAN ============ */
 .slogan-container {
   position: relative;
   overflow: hidden;
@@ -84,7 +81,6 @@ header {
   color: #083b2d;
 }
 
-/* Move FULL WIDTH for seamless loop */
 @keyframes sloganScroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-100%); }
@@ -111,15 +107,17 @@ nav a {
   text-decoration: none;
   padding: 10px 16px;
   font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
   background: #7fcaa0;
+  transform: translateY(-1px);
 }
 
-/* ============ MAIN CONTENT (ANIMATION) ============ */
+/* ============ MAIN CONTENT (ENTRY ANIMATION) ============ */
 .main {
-  max-width: 900px;          /* reduced content frame width */
+  max-width: 900px;
   margin: 160px auto 40px;
   background: #ffffff;
   padding: 40px;
@@ -137,6 +135,17 @@ nav a:hover {
   }
 }
 
+/* ============ BUTTON MICRO-INTERACTION ============ */
+.btn {
+  display: inline-block;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
 /* ============ FOOTER ============ */
 footer {
   background: #0b6b3f;
@@ -145,7 +154,18 @@ footer {
   padding: 18px 12px;
 }
 
-/* ============ WHATSAPP ============ */
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* ============ WHATSAPP FLOAT ============ */
 .whatsapp {
   position: fixed;
   bottom: 16px;
@@ -155,6 +175,11 @@ footer {
   padding: 12px 14px;
   border-radius: 50%;
   text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
 }
 
 /* ===================================================== */
@@ -167,7 +192,6 @@ footer {
 
 @media (max-width: 768px) {
 
-  /* Header: logo + hamburger only */
   .slogan-container {
     display: none;
   }
@@ -192,7 +216,6 @@ footer {
     border-top: 1px solid rgba(0,0,0,0.1);
   }
 
-  /* ============ MOBILE SLOGAN BAR ============ */
   .mobile-slogan {
     display: block;
     position: fixed;
@@ -218,31 +241,42 @@ footer {
     color: #083b2d;
   }
 
-  /* Push content below header + slogan bar */
   .main {
     margin: 130px 12px 30px;
     padding: 22px;
   }
 }
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-}
 
-footer a:hover {
-  text-decoration: underline;
-}
-/* ================= SCROLL ANIMATIONS ================= */
+/* ===================================================== */
+/* ============ SCROLL REVEAL ANIMATIONS ================ */
+/* ===================================================== */
 
-/* Base hidden state */
+/* Apply to sections, lists, images */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-/* When visible */
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Staggered list animation */
+.reveal li {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.reveal.active li {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+
+.reveal.active li:nth-child(1) { transition-delay: 0.1s; }
+.reveal.active li:nth-child(2) { transition-delay: 0.2s; }
+.reveal.active li:nth-child(3) { transition-delay: 0.3s; }
+.reveal.active li:nth-child(4) { transition-delay: 0.4s; }
+.reveal.active li:nth-child(5) { transition-delay: 0.5s; }
