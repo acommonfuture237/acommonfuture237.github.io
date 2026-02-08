@@ -19,7 +19,7 @@ body {
   line-height: 1.7;
 }
 
-/* ============ HEADER (DROP DOWN ANIMATION) ============ */
+/* ============ HEADER ============ */
 header {
   background: #1565c0;   /* DARKER BLUE */
   color: #ffffff;
@@ -195,16 +195,7 @@ footer a:hover {
 }
 
 /* ================= MOBILE LAYOUT ================= */
-
-.mobile-slogan {
-  display: none;
-}
-
 @media (max-width: 768px) {
-
-  .slogan-container {
-    display: none;
-  }
 
   .menu-btn {
     display: block;
@@ -226,29 +217,18 @@ footer a:hover {
     border-top: 1px solid rgba(255,255,255,0.15);
   }
 
-  .mobile-slogan {
+  /* Keep slogan scrolling on mobile */
+  .slogan-container {
     display: block;
-    position: fixed;
-    top: 90px;
-    width: 100%;
-    height: 22px;
-    background: #0d47a1;
-    overflow: hidden;
-    z-index: 900;
+    margin: 6px 0 0;
   }
 
-  .mobile-slogan-track {
-    display: inline-flex;
-    white-space: nowrap;
-    will-change: transform;
-    animation: sloganScroll 18s linear infinite;
+  .slogan-track {
+    animation: sloganScroll 14s linear infinite; /* slightly faster on mobile */
   }
 
-  .mobile-slogan-track span {
-    padding-right: 40px;
+  .slogan-track span {
     font-size: 12px;
-    line-height: 22px;
-    color: #e3f2fd;
   }
 
   .main {
@@ -258,7 +238,6 @@ footer a:hover {
 }
 
 /* ============ SCROLL REVEAL ANIMATIONS ============ */
-
 .reveal {
   opacity: 0;
   transform: translateY(30px);
