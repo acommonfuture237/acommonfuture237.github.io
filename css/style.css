@@ -14,24 +14,20 @@ html, body {
 }
 
 body {
-  background: #d4f0dc;
-  color: #222;
+  background: #1e88e5;   /* GENERAL BLUE BACKGROUND */
+  color: #ffffff;
   line-height: 1.7;
 }
 
 /* ============ HEADER (DROP DOWN ANIMATION) ============ */
 header {
-  background: #1e88e5;   /* Blue */
+  background: #1565c0;   /* DARKER BLUE */
   color: #ffffff;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 3000;
-}
-
-@keyframes headerDrop {
-  to { top: 0; }
 }
 
 .header-inner {
@@ -78,7 +74,7 @@ header {
   display: inline-block;
   padding-right: 40px;
   font-size: 14px;
-  color: #083b2d;
+  color: #e3f2fd;
 }
 
 @keyframes sloganScroll {
@@ -91,19 +87,19 @@ header {
   font-size: 28px;
   cursor: pointer;
   display: none;
-  color: #083b2d;
+  color: #ffffff;
 }
 
 /* ============ NAV ============ */
 nav {
-  background: #9fd8b0;
+  background: #0d47a1;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 nav a {
-  color: #083b2d;
+  color: #ffffff;
   text-decoration: none;
   padding: 10px 16px;
   font-weight: 500;
@@ -111,8 +107,8 @@ nav a {
 }
 
 nav a:hover {
-  background: #7fcaa0;
-  transform: translateY(-1px);
+  background: #1976d2;
+  transform: translateY(-2px);
 }
 
 /* ============ MAIN CONTENT (ENTRY ANIMATION) ============ */
@@ -120,6 +116,7 @@ nav a:hover {
   max-width: 900px;
   margin: 160px auto 40px;
   background: #ffffff;
+  color: #222;
   padding: 40px;
   border-radius: 8px;
 
@@ -143,26 +140,41 @@ nav a:hover {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ============ QUICK LINKS ANIMATION ============ */
+.quick-links a {
+  display: inline-block;
+  margin: 6px 10px;
+  color: #e3f2fd;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.quick-links a:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
 }
 
 /* ============ FOOTER ============ */
 footer {
-  background: #0b6b3f;
-  color: #fff;
+  background: #0d47a1;   /* BLUE FOOTER */
+  color: #ffffff;
   text-align: center;
   padding: 18px 12px;
 }
 
 footer a {
-  color: #ffffff;
+  color: #e3f2fd;
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 footer a:hover {
-  opacity: 0.8;
+  opacity: 0.85;
+  transform: translateY(-2px);
 }
 
 /* ============ WHATSAPP FLOAT ============ */
@@ -182,9 +194,7 @@ footer a:hover {
   transform: scale(1.1);
 }
 
-/* ===================================================== */
-/* ================= MOBILE LAYOUT ===================== */
-/* ===================================================== */
+/* ================= MOBILE LAYOUT ================= */
 
 .mobile-slogan {
   display: none;
@@ -213,7 +223,7 @@ footer a:hover {
 
   nav a {
     width: 100%;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(255,255,255,0.15);
   }
 
   .mobile-slogan {
@@ -222,7 +232,7 @@ footer a:hover {
     top: 90px;
     width: 100%;
     height: 22px;
-    background: #9fd8b0;
+    background: #0d47a1;
     overflow: hidden;
     z-index: 900;
   }
@@ -238,7 +248,7 @@ footer a:hover {
     padding-right: 40px;
     font-size: 12px;
     line-height: 22px;
-    color: #083b2d;
+    color: #e3f2fd;
   }
 
   .main {
@@ -247,11 +257,8 @@ footer a:hover {
   }
 }
 
-/* ===================================================== */
-/* ============ SCROLL REVEAL ANIMATIONS ================ */
-/* ===================================================== */
+/* ============ SCROLL REVEAL ANIMATIONS ============ */
 
-/* Apply to sections, lists, images */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -263,7 +270,6 @@ footer a:hover {
   transform: translateY(0);
 }
 
-/* Staggered list animation */
 .reveal li {
   opacity: 0;
   transform: translateY(15px);
