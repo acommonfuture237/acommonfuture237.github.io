@@ -11,20 +11,21 @@
 <header>
   <div class="header-inner">
 
-  <div class="logo">
-    <img src="images/cophoto.jpg" alt="A Common Future Logo">
-  </div>
-
-  <div class="slogan-container">
-    <div class="slogan-track">
-      <span>Transforming lives, building common frontiers</span>
-      <span>Transforming lives, building common frontiers</span>
+    <div class="logo">
+      <img src="images/cophoto.jpg" alt="A Common Future Logo">
     </div>
+
+    <!-- ✅ DESKTOP SLOGAN -->
+    <div class="slogan-container">
+      <div class="slogan-track">
+        <span>Transforming lives, building common frontiers</span>
+        <span>Transforming lives, building common frontiers</span>
+      </div>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
   </div>
-
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-</div>
 
   <nav id="nav-menu">
     <a href="index.html">Home</a>
@@ -39,13 +40,7 @@
   </nav>
 </header>
 
-<div class="mobile-slogan">
-  <div class="mobile-slogan-track">
-    <span>Transforming lives, building common frontiers</span>
-    <span>Transforming lives, building common frontiers</span>
-  </div>
-</div>
-
+<!-- ✅ MOBILE SLOGAN (ONLY ONCE) -->
 <div class="mobile-slogan">
   <div class="mobile-slogan-track">
     <span>Transforming lives, building common frontiers</span>
@@ -66,7 +61,6 @@
 
   <p>
     <strong>Social Media:</strong><br>
-    
   </p>
 
   <!-- ================= CONTACT FORM ================= -->
@@ -87,131 +81,37 @@
       "
     >
 
-      <!-- ✅ NAME FIELD -->
       <label style="display:block; margin-bottom: 15px;">
         <strong>Your Name</strong><br>
-        <input
-          type="text"
-          name="name"
-          required
-          placeholder="Your full name"
-          style="
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 15px;
-          "
-        >
+        <input type="text" name="name" required placeholder="Your full name"
+          style="width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:4px;">
       </label>
 
-      <!-- ✅ EMAIL FIELD -->
       <label style="display:block; margin-bottom: 15px;">
         <strong>Your Email</strong><br>
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="you@example.com"
-          style="
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 15px;
-          "
-        >
+        <input type="email" name="email" required placeholder="you@example.com"
+          style="width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:4px;">
       </label>
 
-      <!-- ✅ SUBJECT FIELD -->
       <label style="display:block; margin-bottom: 15px;">
         <strong>Subject</strong><br>
-        <input
-          type="text"
-          name="subject"
-          required
-          placeholder="Message subject"
-          style="
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 15px;
-          "
-        >
+        <input type="text" name="subject" required placeholder="Message subject"
+          style="width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:4px;">
       </label>
 
-      <!-- ✅ MESSAGE FIELD -->
       <label style="display:block; margin-bottom: 20px;">
         <strong>Your Message</strong><br>
-        <textarea
-          name="message"
-          required
-          placeholder="Write your message here..."
-          rows="5"
-          style="
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 15px;
-          "
-        ></textarea>
+        <textarea name="message" required rows="5"
+          style="width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:4px;"></textarea>
       </label>
 
-      <button
-        type="submit"
-        style="
-          background: #0b6b3f;
-          color: #ffffff;
-          border: none;
-          padding: 12px 28px;
-          font-size: 15px;
-          border-radius: 4px;
-          cursor: pointer;
-        "
-      >
+      <button type="submit" style="background:#0b6b3f;color:#fff;border:none;padding:12px 28px;border-radius:4px;cursor:pointer;">
         Send Message
       </button>
 
     </form>
   </section>
-  <!-- ================= END FORM ================= -->
-
 </main>
-<!-- ================= QUICK LINKS ================= -->
-<!-- ================= QUICK LINKS ================= -->
-<div style="
-  max-width: 900px;
-  margin: 0 auto 20px;
-  text-align: center;
-  font-family: 'Poppins', Arial, sans-serif;
-">
-  <h3 style="margin-bottom: 10px;">Quick Links</h3>
-
-  <nav style="
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    font-size: 15px;
-  ">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="impact.html">Impact</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="get-involved.html">Get Involved</a>
-    <a href="donate.html">Donate</a>
-    <a href="theory.html">Theory of Change</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</div>
-<!-- ================= END QUICK LINKS ================= -->
 
 <footer>© 2026 A Common Future</footer>
 <script src="js/script.js"></script>
