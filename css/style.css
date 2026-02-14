@@ -265,3 +265,39 @@ footer a:hover {
 .reveal.active li:nth-child(3) { transition-delay: 0.3s; }
 .reveal.active li:nth-child(4) { transition-delay: 0.4s; }
 .reveal.active li:nth-child(5) { transition-delay: 0.5s; }
+/* ================= QUICK LINKS ANIMATION ================= */
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.quick-links a {
+  color: #e3f2fd;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.quick-links a:hover {
+  transform: translateY(-3px) scale(1.05);
+  color: #ffffff;
+}
+
+/* Optional underline animation */
+.quick-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.quick-links a:hover::after {
+  width: 100%;
+}
