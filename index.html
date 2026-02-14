@@ -11,20 +11,20 @@
 <header>
   <div class="header-inner">
 
-  <div class="logo">
-    <img src="images/cophoto.jpg" alt="A Common Future Logo">
-  </div>
-
-  <div class="slogan-container">
-    <div class="slogan-track">
-      <span>Transforming lives, building common frontiers</span>
-      <span>Transforming lives, building common frontiers</span>
+    <div class="logo">
+      <img src="images/cophoto.jpg" alt="A Common Future Logo">
     </div>
+
+    <div class="slogan-container">
+      <div class="slogan-track">
+        <span>Transforming lives, building common frontiers</span>
+        <span>Transforming lives, building common frontiers</span>
+      </div>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
   </div>
-
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-</div>
 
   <nav id="nav-menu">
     <a href="index.html">Home</a>
@@ -94,7 +94,6 @@
   <section>
     <h2>Why International Partners Support ACF</h2>
 
-    <!-- ✅ CORRECTLY FORMATTED CONTENT LIST -->
     <ul style="
       font-family: 'Poppins', Arial, sans-serif;
       font-size: 16px;
@@ -110,12 +109,17 @@
       <li>Culturally grounded approaches using arts and dialogue</li>
     </ul>
 
-    <p style="margin-top: 25px;">
+    <!-- ✅ CALL TO ACTION BUTTONS -->
+    <p style="margin-top: 25px; display: flex; flex-wrap: wrap; gap: 12px;">
       <a href="get-involved.html" class="btn">Partner With Us</a>
+      <a href="donate.html" class="btn" style="background:#25d366;color:#fff;">
+        Donate with Bitcoin
+      </a>
     </p>
   </section>
 
 </main>
+
 <!-- ================= QUICK LINKS ================= -->
 <div style="
   max-width: 900px;
