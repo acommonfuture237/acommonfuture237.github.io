@@ -26,3 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(reveal);
   });
 });
+// Page loader hide when fully loaded
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  if (loader) {
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 0.4s ease";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 400);
+  }
+});
